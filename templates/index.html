@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Health Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 40%;
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            background-color: #ff5e62;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #e04a4f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hair Health Prediction</h1>
+        <form action="/predict" method="POST">
+            <label>Genetics (1 for Yes, 0 for No):</label>
+            <input type="text" name="genetics" required>
+
+            <label>Hormonal Changes (1 for Yes, 0 for No):</label>
+            <input type="text" name="hormonal_changes" required>
+
+            <label>Medical Conditions (1 for Yes, 0 for No):</label>
+            <input type="text" name="medical_conditions" required>
+
+            <label>Medications & Treatments (1 for Yes, 0 for No):</label>
+            <input type="text" name="medications" required>
+
+
+            <label>Nutritional Deficiencies (1 for Yes, 0 for No):</label>
+            <input type="text" name="nutritional_deficiencies" required>
+
+            <label>Stress Level:</label>
+            <select name="stress">
+                <option value="0">Low</option>
+                <option value="1">Moderate</option>
+                <option value="2">High</option>
+            </select>
+
+            <label>Age:</label>
+            <input type="text" name="age" required>
+
+            <label>Poor Hair Care Habits (1 for Yes, 0 for No):</label>
+            <input type="text" name="poor_hair_care_habits" required>
+
+            <label>Environmental Factors (1 for Yes, 0 for No):</label>
+            <input type="text" name="environmental_factors" required>
+
+            <label>Smoking (1 for Yes, 0 for No):</label>
+            <input type="text" name="smoking" required>
+
+            <label>Weight Loss (1 for Yes, 0 for No):</label>
+            <input type="text" name="weight_loss" required>
+
+            <button class="btn" type="submit">Predict</button>
+        </form>
+    </div>
+
+</body>
+</html>
